@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.content{
+  
+  overflow:hidden;
+  transition:all .5s;
+}
+.menu{
+  
+  background-color:#333;
+  position:fixed;
+  top:0;
+  left:0;
+  height:100%;
+  width:0;
+  display:block;
+ transition:all .5s;
+  overflow:hidden;
+}
+
+.menu-item{
+  text-decoration:none;
+  color:#fff;
+  display:block;
+  padding:10px 15px;
+  text-align:center;
+  text-transform:uppercase;
+  
+}
+.closeMenu{
+  text-decoration:none;
+  color:#fff;
+  display:block;
+  padding:10px 15px;
+  text-align:right;
+  font-size:20px;
+ 
+  
+}
+.openMenu{
+  display:inline-block;
+text-decoration:none;
+  border: 1px solid black;
+  padding:5px;
+  
+}
+
+	</style>
+</head>
+<body>
+	<div class="content" id="content">
+  <a href="#" class="openMenu" onclick="openmenu()">Menu</a>
+  
+  <div class="menu" id="menu">
+    <a href="#" class="closeMenu" onclick="closemenu()">x</a>
+    
+      
+        <a href="" class="menu-item">Home</a>
+        <a href="" class="menu-item">About</a>
+        <a href="" class="menu-item">Contacts</a>
+        <a href="" class="menu-item">Blog</a>
+        <a href="" class="menu-item">Services</a>
+     
+
+  </div>
+  
+</div>
+<script type="text/javascript">
+	function openmenu(){
+ 
+  document.getElementById('menu').style.width='250px';
+  document.getElementById('content').style.marginLeft='250px';
+}
+function closemenu(){
+  
+  document.getElementById('menu').style.width='0';
+  document.getElementById('content').style.marginLeft='0';
+}
+</script>
+
+</body>
+</html>
