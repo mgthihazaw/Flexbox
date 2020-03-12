@@ -11,7 +11,7 @@
     font-size:1.4rem !important;
     background-color: #ffffff;
     height:7rem;
-    border-bottom : 1px solid var(--grey-light-1);
+    border-bottom : 1px solid var(--grey-light-2);
     box-shadow: var(--shadow);
    display:flex;
    justify-content: space-between;
@@ -30,7 +30,7 @@ display: flex;
     justify-content: space-between;
     
 }
-.menu{
+.hotel-view{
   flex : 1;
   background-color: rgb(230, 221, 221);
   height:80rem;
