@@ -42,8 +42,7 @@ body {
   max-width: 120rem;
   margin: 8rem auto;
   background-color: var(--grey-light-1);
-  box-shadow: var(--shadow-dark);
-  min-height: 50rem; }
+  box-shadow: var(--shadow-dark); }
 
 .header {
   font-size: 1.4rem !important;
@@ -56,17 +55,20 @@ body {
   align-items: center; }
 
 .content {
-  display: flex;
-  min-height: 50rem; }
+  display: flex; }
 
 .sidebar {
-  flex: 0 0 300px;
+  flex: 0 0 200px;
   background-color: var(--grey-dark-1);
-  box-shadow: 3 0 5px #000; }
+  box-shadow: 3 0 5px #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
 
 .menu {
   flex: 1;
-  background-color: #e6dddd; }
+  background-color: #e6dddd;
+  height: 80rem; }
 
 .footer {
   background-color: #868080;
@@ -160,3 +162,50 @@ body {
     text-transform: uppercase;
     font-weight: 400;
     color: #a12e2e; }
+
+/*****************************************
+       Sidebar
+*****************************************/
+.sidebar-nav {
+  list-style: none;
+  margin-top: 1.5rem;
+  font-size: 1.4rem; }
+  .sidebar-nav__item {
+    position: relative; }
+    .sidebar-nav__item:not(:last-child) {
+      margin-bottom: 0.5rem; }
+    .sidebar-nav__item::before {
+      content: "";
+      height: 100%;
+      width: 0.5rem;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: #942e2e;
+      transform: scaleY(0);
+      transition: transform 0.2s, width 0.2s cubic-bezier(0, 0.02, 1, 0.01) 0.1s, background-color 0.2s; }
+    .sidebar-nav__item:hover::before, .sidebar-nav__item--active::before {
+      transform: scaleY(1);
+      width: 100%;
+      z-index: 1; }
+    .sidebar-nav__item:active::before {
+      background-color: #a86161; }
+  .sidebar-nav__link, .sidebar-nav__link:visited {
+    text-decoration: none;
+    color: var(--grey-light-2);
+    display: block;
+    padding: 1.5rem 3rem;
+    display: flex;
+    align-items: center;
+    z-index: 10;
+    position: relative; }
+  .sidebar-nav__icon {
+    font-size: 1.75rem;
+    color: currentColor;
+    margin-right: 2rem; }
+
+.legal {
+  font-size: 1.2rem;
+  color: var(--grey-light-4);
+  text-align: center;
+  padding: 1.2rem; }
