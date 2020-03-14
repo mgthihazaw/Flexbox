@@ -40,6 +40,8 @@
   display: flex;
   margin: 3rem;
   border-bottom: 1px solid var(--grey-light-2);
+  font-size: 1.4rem;
+  font-weight: 100;
 }
 .description {
   background-color: #fff;
@@ -47,11 +49,13 @@
   margin-right: 3rem;
   padding: 3rem;
   box-shadow: 0 0.4rem 2rem rgba(#000, 0.5);
-  font-size: 1.4rem;
-  font-weight: 100;
+  
  color: grey;
 }
 .user-reviews {
-  background-color: rgb(204, 210, 226);
+  
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
