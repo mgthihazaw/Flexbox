@@ -304,7 +304,7 @@ body {
     box-shadow: none; }
   50% {
     transform: scale(1.05);
-    box-shadow: 0 1rem 4rem black; }
+    box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.6); }
   100% {
     transform: scale(1);
     box-shadow: none; } }
@@ -361,7 +361,7 @@ body {
 *****************************************/
 .review {
   background-color: #fff;
-  box-shadow: 0 1rem 4rem rgba(243, 243, 243, 0.5);
+  box-shadow: 0 1rem 4rem rgba(58, 56, 56, 0.5);
   padding: 3rem;
   margin-bottom: 3rem; }
   .review__text {
@@ -375,7 +375,8 @@ body {
       font-weight: 700;
       font-size: 1.2rem;
       margin-bottom: 0.5rem;
-      text-transform: uppercase; }
+      text-transform: uppercase;
+      color: var(--primary-light-3); }
     .review__user-date {
       font-size: 1rem;
       color: var(--grey-dark-1); }
@@ -387,3 +388,50 @@ body {
   .review__rating {
     font-size: 2rem;
     color: var(--primary-light); }
+
+/*****************************************
+              CTA
+*****************************************/
+.cta {
+  padding: 3.5rem 0;
+  text-align: center; }
+  .cta__book-now {
+    font-size: 2rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-bottom: 2.5rem; }
+
+/*****************************************
+              CTA BTN
+*****************************************/
+.btn {
+  font-size: 1.5rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  border-radius: 100px;
+  border: none;
+  background-image: linear-gradient(to right, var(--primary-light), var(--primary-dark));
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer; }
+  .btn > * {
+    transition: all .5s;
+    display: inline-block;
+    height: 100%;
+    width: 100%; }
+  .btn__visible {
+    padding: 2rem 7.5rem;
+    position: relative; }
+  .btn__invisible {
+    padding: 2rem 0;
+    position: absolute;
+    left: 0;
+    top: -150%; }
+  .btn:hover .btn__visible {
+    transform: translateY(150%); }
+  .btn:hover .btn__invisible {
+    top: 0%; }
+  .btn:focus {
+    outline: none;
+    animation: pulsate 1s infinite; }

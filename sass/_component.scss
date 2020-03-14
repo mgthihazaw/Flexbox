@@ -281,7 +281,7 @@
   }
   50%{
     transform: scale(1.05);
-    box-shadow: 0 1rem 4rem rgba(#000000, 1.0);
+    box-shadow: 0 1rem 4rem rgba(#000000, 0.6);
   }
   100%{
     transform: scale(1);
@@ -360,7 +360,7 @@ margin-bottom : 2rem;
 
 .review{
   background-color: #fff;
-  box-shadow: 0 1rem 4rem rgba(rgb(243, 243, 243), 0.5);
+  box-shadow: 0 1rem 4rem rgba(rgb(58, 56, 56), 0.5);
   padding: 3rem;
   margin-bottom: 3rem;
   &__text{
@@ -381,6 +381,7 @@ margin-bottom : 2rem;
      font-size:1.2rem;
      margin-bottom:0.5rem;
      text-transform: uppercase;
+     color:var(--primary-light-3);
     }
     &-date{
      font-size:1rem;
@@ -400,4 +401,68 @@ margin-bottom : 2rem;
   }
   
   
+}
+
+/*****************************************
+              CTA
+*****************************************/
+.cta{
+  padding :  3.5rem 0;
+  text-align: center;
+  &__book-now{
+    font-size: 2rem;
+    font-weight:300;
+    text-transform: uppercase;
+    margin-bottom: 2.5rem;
+  }
+}
+/*****************************************
+              CTA BTN
+*****************************************/
+
+.btn{
+  font-size: 1.5rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  border-radius: 100px;
+  border: none;
+  background-image: linear-gradient(to right,var(--primary-light),var(--primary-dark));
+  color:#fff;
+  position: relative;
+  overflow:hidden;
+  cursor: pointer;
+  
+
+  & > *{
+    transition:all .5s;
+    display: inline-block;
+    height:100%;
+    width:100%;
+  }
+  &__visible{
+   
+    padding:2rem 7.5rem;
+    position: relative;
+  }
+  &__invisible{
+   
+   
+    padding:2rem 0;
+   
+    position: absolute;
+    left:0;
+    top:-150%;
+
+  }
+  &:hover &__visible{
+    transform: translateY(150%);
+  }
+  &:hover &__invisible{
+    top :0%;
+    // transform: translateY(150%);
+  }
+  &:focus{
+    outline:none;
+    animation: pulsate 1s infinite;
+  }
 }
