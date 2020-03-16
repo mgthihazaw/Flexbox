@@ -58,6 +58,7 @@
   font-weight: 100;
   @media only screen and (max-width: 600px) {
     flex-direction: column;
+    font-weight:200;
    }
 
   @media only screen and (max-width: $res-medium) {
