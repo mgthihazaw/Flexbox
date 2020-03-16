@@ -66,6 +66,10 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center; }
+  @media only screen and (max-width: 31.25em) {
+    .header {
+      flex-wrap: wrap;
+      height: 11rem; } }
 
 .content {
   display: flex; }
@@ -95,7 +99,7 @@ body {
   border-bottom: 1px solid var(--grey-light-2);
   font-size: 1.4rem;
   font-weight: 100; }
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 37.5em) {
     .detail {
       flex-direction: column;
       font-weight: 200; } }
@@ -114,7 +118,7 @@ body {
     .description {
       margin-right: 2rem;
       padding: 2rem; } }
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 37.5em) {
     .description {
       margin: 0;
       margin-bottom: 3rem; } }
@@ -140,6 +144,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center; }
+  @media only screen and (max-width: 75em) {
+    .search {
+      order: 1;
+      flex: 0 0 100%; } }
   .search__input {
     font-family: inherit;
     font-size: inherit;
@@ -264,10 +272,19 @@ body {
       .sidebar-nav__link, .sidebar-nav__link:visited {
         justify-content: center;
         padding: 2rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .sidebar-nav__link, .sidebar-nav__link:visited {
+        flex-direction: column;
+        padding: 1.5rem 0.5rem; } }
   .sidebar-nav__icon {
     font-size: 1.75rem;
     color: currentColor;
     margin-right: 2rem; }
+    @media only screen and (max-width: 37.5em) {
+      .sidebar-nav__icon {
+        margin: 0;
+        width: 1.5rem;
+        height: 1.5rem; } }
 
 .legal {
   font-size: 1.2rem;

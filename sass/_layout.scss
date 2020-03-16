@@ -5,7 +5,7 @@
   box-shadow: var(--shadow-dark);
   min-height:50rem;
 
-  @media only screen and (max-width: $res-largest){ //1200px
+  @media only screen and (max-width: $res-largest){ 
         margin:0;
         max-width:100%;
         width:100%;
@@ -21,11 +21,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
- 
+  @media only screen and (max-width: $res-smallest){ 
+    flex-wrap: wrap ;
+    height:11rem;
+    
+
+}
 }
 .content {
   display: flex;
-  @media only screen and (max-width: $res-medium){ //1200px
+  @media only screen and (max-width: $res-medium){ 
     flex-direction: column;
 
 }
@@ -56,7 +61,7 @@
   border-bottom: 1px solid var(--grey-light-2);
   font-size: 1.4rem;
   font-weight: 100;
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: $res-small) {
     flex-direction: column;
     font-weight:200;
    }
@@ -76,7 +81,7 @@
   margin-right:2rem;
   padding:2rem;
  }
- @media only screen and (max-width: 600px) {
+ @media only screen and (max-width: $res-small) {
   margin:0;
   margin-bottom: 3rem;
  }

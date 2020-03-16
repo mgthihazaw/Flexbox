@@ -16,6 +16,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media only screen and (max-width: $res-largest) {
+   
+    order: 1;
+    flex: 0 0 100%;
+  }
   &__input {
     font-family: inherit;
     font-size: inherit;
@@ -183,7 +189,11 @@
 
     @media only screen and (max-width: $res-medium) {
       justify-content: center;
-      padding:2rem;
+      padding: 2rem;
+    }
+    @media only screen and (max-width: $res-small) {
+      flex-direction: column;
+      padding: 1.5rem 0.5rem;
     }
   }
   &__link:hover {
@@ -195,6 +205,11 @@
     color: currentColor;
 
     margin-right: 2rem;
+    @media only screen and (max-width: $res-small) {
+      margin: 0;
+      width: 1.5rem;
+      height: 1.5rem;
+    }
   }
 }
 .legal {
@@ -384,9 +399,8 @@
   margin-bottom: 3rem;
 
   @media only screen and (max-width: $res-medium) {
-    
-    padding:2rem;
-   }
+    padding: 2rem;
+  }
   &__text {
     margin-bottom: 2rem;
   }
